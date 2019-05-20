@@ -80,3 +80,6 @@ RUN apk add --update ca-certificates \
 RUN apk --no-cache add libc-dev gcc make python-dev py-pip
 RUN pip install credstash
 
+# argo
+RUN curl -sSL -o /usr/local/bin/argo https://github.com/argoproj/argo/releases/download/v2.2.1/argo-linux-amd64 \
+  && chmod +x /usr/local/bin/argo
